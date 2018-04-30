@@ -1,0 +1,7 @@
+diag_drawMode
+diag_enable
+diag_enabled
+diag_list
+diag_mergeConfigFile
+diag_recordTurretLimits
+diag_toggle
