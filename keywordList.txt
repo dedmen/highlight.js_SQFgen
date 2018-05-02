@@ -9,6 +9,7 @@ for
 forEach
 from
 if
+private
 switch
 then
 throw

@@ -3,11 +3,13 @@
 #include <MsgBoxConstants.au3>
 #include <WinAPIFiles.au3>
 
-$commands = _ArrayUnique(FileReadToArray ( "commandList.txt" ))
+$commands = FileReadToArray ( "commandList.txt" )
 _ArrayConcatenate ($commands, FileReadToArray ( "additonalCommandList.txt" ))
+$commands = _ArrayUnique($commands)
 _ArraySort($commands)
 
 $case = FileReadToArray ( "caseList.txt" )
+_ArrayConcatenate ($case, FileReadToArray ( "additonalCommandList.txt" ))
 $exclude = FileReadToArray ( "literalList.txt" )
 _ArrayConcatenate ($exclude, FileReadToArray ( "keywordList.txt" ))
 Local $hFileOut = FileOpen("commandOut.txt", $FO_OVERWRITE )
